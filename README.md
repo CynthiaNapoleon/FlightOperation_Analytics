@@ -110,16 +110,16 @@ Analysis: The network carries a 40,710-minute "Incident Tax." This total volume 
 
 ## Strategic Recommendations by Stakeholder Group:
 
-- # 1. Network Planning & Scheduling
+- **1. Network Planning & Scheduling**
 Corridor Rehabilitation (BOS-DEN): Immediate intervention is required for the BOS-DEN flight path. With a 33.63% OTP, this route requires a schedule "padding" adjustment or a shift in aircraft rotation to prevent it from remaining the network's primary reliability failure.
 Buffer Realignment: Implement a mandatory "Late-Day Buffer" for flights arriving after the 18:00 Breaking Point. By adding 15 minutes of scheduled ground time during this window, the department can reduce the 12% overnight grounding rate currently caused by the late-day delay spike.
-- # 2. Crew Logistics & Resource Management
+- **2. Crew Logistics & Resource Management**
 Workload Equity Balancing: Redesign the bidding system at ORD to close the 12.61-hour Inequity Gap. By distributing duty hours more evenly, the department can lower the 47.7% High-Risk fatigue rate and reduce the resulting sick call volume that currently drains 3,558 minutes annually.
 Role-Specific Redundancy: Introduce "Standby Second Officers" at high-friction hubs. Because a single Second Officer late sign-in scales into a 79-minute system lag (the highest in the network), providing junior flight-deck redundancy offers the highest ROI for delay mitigation.
-- # 3. Safety & Compliance
+- **3. Safety & Compliance**
 Procedural Standardization: Transition safety focus from "Fatigue Management" to "Procedural Discipline." Since 100% of incidents occurred under normal fatigue ratings, the department should launch a targeted training campaign to address the "Safety Culture Gap" at SFO, where incident rates are 18% higher than at LAX.
 Seasonal Risk Mitigation: Deploy "Safety Task Forces" during the March Stress Spike. With 22% of all annual incidents occurring in this single month, heightened oversight is required during seasonal volume surges to maintain system stability.
-- # 4. Ground Operations & Infrastructure
+- **4. Ground Operations & Infrastructure**
 Infrastructure Decoupling (ATL & MIA): Transition to a structural surge-management model at ATL, where delays are growing 35% faster than flight volume. Additionally, prioritize ground stability at MIA to protect the network from its 232,683-minute systemic ripple effect.
 Efficiency Export (ORD/SFO Model): Formalize and export the "Quick Turn" protocols from ORD (78.49% recovery rate) to BOS and ORD. Standardizing these processes will stop the 5-minute-per-turn "time leakage" and recover lost capacity across the East Coast and Midwest corridors.
 
