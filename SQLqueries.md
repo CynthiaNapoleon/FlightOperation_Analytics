@@ -1,3 +1,6 @@
+```sql
+
+```
 -- # Area 1: Network Operations (Network Congestion Audit)
 
 -- a)	What are the primary bottlenecks at the airports of our network?
