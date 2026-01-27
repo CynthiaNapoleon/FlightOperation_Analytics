@@ -1,6 +1,6 @@
 ```sql
 
-```
+
 -- # Area 1: Network Operations (Network Congestion Audit)
 
 -- a)	What are the primary bottlenecks at the airports of our network?
@@ -92,7 +92,7 @@ FROM flight_ops
 GROUP BY Origin_airport, Destination_airport
 HAVING COUNT(Flight_id) > 50;
 
-
+```
 
 
 
