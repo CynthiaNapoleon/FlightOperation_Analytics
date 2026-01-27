@@ -1,6 +1,7 @@
 -- # Area 1: Network Operations (Network Congestion Audit)
 
 -- a)	What are the primary bottlenecks at the airports of our network?
+sql: ```sql 
 CREATE VIEW vw_TopDelayReasons AS
 WITH DelayCounts AS (
     SELECT 
@@ -20,7 +21,7 @@ SELECT
     ROUND(Avg_Delay_Time, 2) as Avg_Delay_Minutes
 FROM DelayCounts
 WHERE Reason_Rank <= 3;
-
+```
 
 --  b)	Which aircraft are dragging down the fleet reliability?
 CREATE VIEW vw_AircraftReliability AS
