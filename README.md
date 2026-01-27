@@ -18,10 +18,10 @@ To prevent system-wide failure, the Operations Department commissioned this diag
 - Targed SQL queries regarding various business questions can be found here [link].
 
 **4 Tableau dashboards for 4 groups of Stakeholders in the Operations Department of Aurora Pacific Airways can be found below:**
-- For Network Planning & Scheduling Stakeholder -> to help them design a flight schedule that is time efficient and reliable, the dashboard can be found here [link]
-- For Crew Logistics & Resource Management -> to help them makes changes to ensure right people are at the right time without burning them out, the dashboard can be found here [link]
-- For Safety and Compliance -> to help them create plans that minimise operational risk and ensure procedural adherance, the dashboard can be found here [link]
-- For Ground Operations & Infrastructure ->to help them manage the physical "turn" of the aircraft and hub capacity, the dashboard can be found here [link]
+- For Network Planning & Scheduling Stakeholder -> to help them design a flight schedule that is time efficient and reliable, the dashboard can be found here <a href="https://public.tableau.com/app/profile/cynthia.napoleon/viz/Flight_Operations_AuroraPacificAirways/Dashboard1">[link]<a>
+- For Crew Logistics & Resource Management -> to help them makes changes to ensure right people are at the right time without burning them out, the dashboard can be found here <a href="https://public.tableau.com/app/profile/cynthia.napoleon/viz/Flight_Operations_AuroraPacificAirways/Dashboard2">[link]<a>
+- For Safety and Compliance -> to help them create plans that minimise operational risk and ensure procedural adherance, the dashboard can be found here <a href="https://public.tableau.com/app/profile/cynthia.napoleon/viz/Flight_Operations_AuroraPacificAirways/Dashboard3">[link]<a>
+- For Ground Operations & Infrastructure ->to help them manage the physical "turn" of the aircraft and hub capacity, the dashboard can be found here <a href="https://public.tableau.com/app/profile/cynthia.napoleon/viz/Flight_Operations_AuroraPacificAirways/Dashboard4">[link]<a>
 
 ## **Data Structure & Initial Checks**
 The companies main database structure as seen below consists of four tables: table1, table2, table3, table4, with a total row count of X records. A description of each table is as follows:
