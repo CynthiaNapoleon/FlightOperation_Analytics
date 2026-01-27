@@ -13,7 +13,7 @@ To prevent system-wide failure, the Operations Department commissioned this diag
 # The Goal: Shift from "Reactive Firefighting" to "Proactive Resilience"—reclaiming lost minutes and bulletproofing the 2025 schedule.
 
 
-- The Excel log sheet to record all the cleaning process can be found here [link].
+- The Excel log sheet to record all the cleaning process can be found here [link].<a href="https://public.tableau.com/app/profile/cynthia.napoleon/viz/Flight_Operations_AuroraPacificAirways/Dashboard1">[link]<a>
 - The SQL queries used to inspect the data for its quality for this analysis can be found here [link].
 - Targed SQL queries regarding various business questions can be found here [link].
 
