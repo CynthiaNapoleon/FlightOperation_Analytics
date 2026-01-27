@@ -95,12 +95,84 @@ HAVING COUNT(Flight_id) > 50;
 
 -- # Area 2: Crew Logistics (Workforce Constraints)
 ```sql
---
---
---
---
---
---
+--a) Base Efficiency Benchmarking
+--Calculates how each crew base performs compared to the corporate average.
+CREATE VIEW vw_BaseEfficiency AS
+WITH BaseStats AS (
+    SELECT 
+        Crew_base_airport,
+        AVG(CAST(Total_duty_hours AS FLOAT)) as Avg_Base_Duty,
+        -- Converts HH:MM:SS to total minutes in T-SQL
+        AVG(CAST(DATEPART(HOUR, CAST(Delay_in_starting AS TIME)) * 60 + 
+            DATEPART(MINUTE, CAST(Delay_in_starting AS TIME)) AS FLOAT)) as Avg_Base_Start_Delay
+    FROM crew_scheduling
+    GROUP BY Crew_base_airport
+)
+SELECT 
+    Crew_base_airport,
+    ROUND(Avg_Base_Duty, 2) as Avg_Base_Duty,
+    ROUND(Avg_Base_Start_Delay, 2) as Avg_Base_Start_Delay,
+    ROUND(AVG(Avg_Base_Duty) OVER(), 2) as Company_Avg_Duty,
+    ROUND(Avg_Base_Duty - AVG(Avg_Base_Duty) OVER(), 2) as Duty_Variance
+FROM BaseStats;
+
+--b) Role-Based Delay Impact
+--Identifies which crew roles (Pilots, Cabin Crew) face the most friction at sign-in.
+CREATE VIEW vw_RoleDelayImpact AS
+SELECT 
+    Crew_role,
+    COUNT(*) as Duty_Count,
+    ROUND(AVG(CAST(DATEPART(HOUR, CAST(Delay_in_starting AS TIME)) * 60 + 
+              DATEPART(MINUTE, CAST(Delay_in_starting AS TIME)) AS FLOAT)), 2) as Avg_Start_Delay_Min
+FROM crew_scheduling
+GROUP BY Crew_role;
+
+--c) Layover Optimization
+--Highlights bases where crew are sitting idle for too long.
+CREATE VIEW vw_LayoverOptimization AS
+SELECT 
+    Crew_base_airport,
+    ROUND(AVG(CAST(Layover_duration_hours AS FLOAT)), 2) as Avg_Layover_Hrs,
+    MAX(Layover_duration_hours) as Max_Layover_Hrs,
+    SUM(CASE WHEN Layover_duration_hours > 24 THEN 1 ELSE 0 END) as Layovers_Over_24h
+FROM crew_scheduling
+GROUP BY Crew_base_airport;
+
+--d) Workload Equity Analysis
+--Uses STDEV to see if some crew members are overworked while others are underutilized.
+CREATE VIEW vw_WorkloadEquity AS
+SELECT 
+    Crew_base_airport,
+    Crew_role,
+    ROUND(STDEV(Total_duty_hours), 2) as Duty_Hour_StdDev,
+    ROUND(MAX(Total_duty_hours) - MIN(Total_duty_hours), 2) as Workload_Range_Hrs,
+    COUNT(DISTINCT Crew_id) as Crew_Count
+FROM crew_scheduling
+GROUP BY Crew_base_airport, Crew_role
+HAVING COUNT(*) > 5;
+
+--e) Duty Start Clusters (Shift Analysis)
+--Groups shifts into categories to find "problem times."
+CREATE VIEW vw_DutyStartClusters AS
+SELECT 
+    CASE 
+        WHEN DATEPART(HOUR, CAST(Scheduled_start_time AS TIME)) BETWEEN 4 AND 8 THEN 'Early Morning Rush'
+        WHEN DATEPART(HOUR, CAST(Scheduled_start_time AS TIME)) BETWEEN 9 AND 17 THEN 'Daytime Shift'
+        WHEN DATEPART(HOUR, CAST(Scheduled_start_time AS TIME)) BETWEEN 18 AND 22 THEN 'Evening Shift'
+        ELSE 'Night Shift'
+    END as Shift_Category,
+    ROUND(AVG(CAST(DATEPART(HOUR, CAST(Delay_in_starting AS TIME)) * 60 + 
+              DATEPART(MINUTE, CAST(Delay_in_starting AS TIME)) AS FLOAT)), 2) as Avg_Start_Delay_Min,
+    COUNT(*) as Shift_Count
+FROM crew_scheduling
+GROUP BY 
+    CASE 
+        WHEN DATEPART(HOUR, CAST(Scheduled_start_time AS TIME)) BETWEEN 4 AND 8 THEN 'Early Morning Rush'
+        WHEN DATEPART(HOUR, CAST(Scheduled_start_time AS TIME)) BETWEEN 9 AND 17 THEN 'Daytime Shift'
+        WHEN DATEPART(HOUR, CAST(Scheduled_start_time AS TIME)) BETWEEN 18 AND 22 THEN 'Evening Shift'
+        ELSE 'Night Shift'
+    END;
+
 ```
 
 -- # Area 3: Safety & Vulnerability (Systemic Fragility)
