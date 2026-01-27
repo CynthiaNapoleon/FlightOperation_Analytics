@@ -10,10 +10,10 @@ To prevent system-wide failure, the Operations Department commissioned this diag
 - **3)Safety & Vulnerability:** To analyze the relationship between procedural safety and operational reliability.
 - **4)Infrastructure Management:** To determine which airports of the APA network have reached a point of physical saturation.
 
-# The Goal: Shift from "Reactive Firefighting" to "Proactive Resilience"—reclaiming lost minutes and bulletproofing the 2025 schedule.
+## The Goal: Shift from "Reactive Firefighting" to "Proactive Resilience"—reclaiming lost minutes and bulletproofing the 2025 schedule.
 
 
-- The Excel log sheet to record all the cleaning process can be found here [link].<a href="https://public.tableau.com/app/profile/cynthia.napoleon/viz/Flight_Operations_AuroraPacificAirways/Dashboard1">[link]<a>
+- The Excel log sheet to record all the cleaning process can be found here [link]
 - The SQL queries used to inspect the data for its quality for this analysis can be found here [link].
 - Targed SQL queries regarding various business questions can be found here [link].
 
