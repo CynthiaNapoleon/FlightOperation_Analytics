@@ -6,22 +6,22 @@ In 2024, Aurora Pacific Airways (APA) hit a critical operational plateau. Despit
 
 To prevent system-wide failure, the Operations Department commissioned this diagnostic audit across four critical areas:
 - **1)Network Operations:** To identify where the network is physically "hemorrhaging" minutes and pinpoint seasonal failure points.
--**2)Crew Logistics:** To evaluate crew base performance and identify role-based friction that prevents on-time departures.
-**3)Safety & Vulnerability:** To analyze the relationship between procedural safety and operational reliability.
-**4)Infrastructure Management:** To determine which airports of the APA network have reached a point of physical saturation.
+- **2)Crew Logistics:** To evaluate crew base performance and identify role-based friction that prevents on-time departures.
+- **3)Safety & Vulnerability:** To analyze the relationship between procedural safety and operational reliability.
+- **4)Infrastructure Management:** To determine which airports of the APA network have reached a point of physical saturation.
 
 # The Goal: Shift from "Reactive Firefighting" to "Proactive Resilience"—reclaiming lost minutes and bulletproofing the 2025 schedule.
 
 
-The Excel log sheet to record all the cleaning process can be found here [link].
-The SQL queries used to inspect the data for its quality for this analysis can be found here [link].
-Targed SQL queries regarding various business questions can be found here [link].
+- The Excel log sheet to record all the cleaning process can be found here [link].
+- The SQL queries used to inspect the data for its quality for this analysis can be found here [link].
+- Targed SQL queries regarding various business questions can be found here [link].
 
 **4 Tableau dashboards for 4 groups of Stakeholders in the Operations Department of Aurora Pacific Airways can be found below:**
-For Network Planning & Scheduling Stakeholder -> to help them design a flight schedule that is time efficient and reliable, the dashboard can be found here [link]
-For Crew Logistics & Resource Management -> to help them makes changes to ensure right people are at the right time without burning them out, the dashboard can be found here [link]
-For Safety and Compliance -> to help them create plans that minimise operational risk and ensure procedural adherance, the dashboard can be found here [link]
-For Ground Operations & Infrastructure ->to help them manage the physical "turn" of the aircraft and hub capacity, the dashboard can be found here [link]
+- For Network Planning & Scheduling Stakeholder -> to help them design a flight schedule that is time efficient and reliable, the dashboard can be found here [link]
+- For Crew Logistics & Resource Management -> to help them makes changes to ensure right people are at the right time without burning them out, the dashboard can be found here [link]
+- For Safety and Compliance -> to help them create plans that minimise operational risk and ensure procedural adherance, the dashboard can be found here [link]
+- For Ground Operations & Infrastructure ->to help them manage the physical "turn" of the aircraft and hub capacity, the dashboard can be found here [link]
 
 ## **Data Structure & Initial Checks**
 The companies main database structure as seen below consists of four tables: table1, table2, table3, table4, with a total row count of X records. A description of each table is as follows:
@@ -36,28 +36,30 @@ Table 5:
 ## **Executive Summary**
 **Overview of Findings**
 The 2024 Audit reveals an airline operating at a breaking point, with systemic fragility causing resiliency to plummet during seasonal peaks. While ORD emerged as the "Resiliency King" with an elite 78.49% recovery rate, the broader network is hemorrhaging time due to a staggering 40,710-minute "Operational Tax"—a figure equivalent to grounding three full aircraft for an entire month.
+
 The audit identifies several critical failure points:
-**Infrastructure Saturation:** At core hubs like ATL, delays have spiked 35% faster than flight volume, proving the system has reached a physical ceiling.
-**The Second Officer Bottleneck:** Operational stability sank to its lowest point during junior flight-deck delays; a single late sign-in triggers a 79-minute system lag—the most lethal role-based delay in the fleet.
-**Human Capital Depletion:** A major risk factor was uncovered in crew health, with 47.7% of the workforce categorized as "High Risk" for fatigue, fueling the sick calls that account for 58% of all safety-related time loss.
-**The March Stress Spike:** Safety performance dipped to an annual low in March, which alone accounted for 22% of all yearly incidents.
+- **Infrastructure Saturation:** At core hubs like ATL, delays have spiked 35% faster than flight volume, proving the system has reached a physical ceiling.
+- **The Second Officer Bottleneck:** Operational stability sank to its lowest point during junior flight-deck delays; a single late sign-in triggers a 79-minute system lag—the most lethal role-based delay in the fleet.
+- **Human Capital Depletion:** A major risk factor was uncovered in crew health, with 47.7% of the workforce categorized as "High Risk" for fatigue, fueling the sick calls that account for 58% of all safety-related time loss.
+- **The March Stress Spike:** Safety performance dipped to an annual low in March, which alone accounted for 22% of all yearly incidents.
 The Domino Effect: Ground efficiency in laggard bases has hit a trough, "leaking" 5 minutes per turn and triggering mandatory overnight groundings at SFO due to the 18:00 "Breaking Point.”
 
 ## **Insights Deep Dive**
 
 # Area 1: Network Operations (Network Congestion Audit)
-A) Hub Bottlenecks: SFO Aircraft Rotation
+- A) Hub Bottlenecks: SFO Aircraft Rotation
 Analysis: SFO recorded 639 occurrences of Aircraft Rotation delays, representing 42% of all rotation-linked friction in the network. This metric confirms that SFO is a "downstream victim"; historically, the hub isn't failing locally, but is absorbing significant late arrivals, creating a "domino effect" that prevents the base from ever reaching a "clean" operational state.
-B) Fleet Reliability: Tail N0076QX
+- B) Fleet Reliability: Tail N0076QX
 Analysis: In September 2024, Tail N0076QX recorded 10 cancellations, accounting for 15% of the entire fleet's monthly cancellations despite being only one aircraft. This "Problem Child" trend forces the NOCC to scramble for spare aircraft 51% more often than average, creating a performance drain on standby reserves.
-C) Utilization: Port-to-Port Variance
+- C) Utilization: Port-to-Port Variance
 Analysis: SFO maintains a -74.37 min variance, while BOS and ORD "leak" roughly 5 minutes per turn (a 7% efficiency gap). This pattern reveals that East Coast ground process sluggishness is essentially "bleeding" potential flight time, resulting in a cumulative loss of capacity that could have supported two additional daily rotations.
-D) Network Vulnerability: The 18:00 Breaking Point
+- D) Network Vulnerability: The 18:00 Breaking Point
 Analysis: Delays peak at 25.92 minutes at 18:00, a 38% increase over midday averages. This late-day spike is a critical failure point; historically, these minutes are unrecoverable due to curfew and crew rest rules, leading directly to the overnight grounding of 12% of the affected fleet.
-E) Schedule Recovery: ORD Quick-Turn Efficiency
+- E) Schedule Recovery: ORD Quick-Turn Efficiency
 Analysis: ORD achieved a 78.49% recovery rate, outperforming the network average by 22%. By successfully "Quick Turning" 8 out of 10 delayed aircraft, ORD serves as the gold standard for resiliency, proving that aggressive ground management can halt the propagation of network delays.
-F) Route Predictability: SFO-LAX Volatility
+- F) Route Predictability: SFO-LAX Volatility
 Analysis: The SFO-LAX corridor shows a Standard Deviation of 19.61, which is 45% higher than comparable short-haul routes. This "Wild Card" trend indicates that arrival times are highly inconsistent, creating a staffing nightmare where gate agents are underutilized during early arrivals and overwhelmed during late surges.
+
 [Visualization specific to category 1]
 
 
