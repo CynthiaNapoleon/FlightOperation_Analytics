@@ -1,8 +1,5 @@
-```sql
-
-
 -- # Area 1: Network Operations (Network Congestion Audit)
-
+```sql
 -- a)	What are the primary bottlenecks at the airports of our network?
 CREATE VIEW vw_TopDelayReasons AS
 WITH DelayCounts AS (
@@ -97,28 +94,104 @@ HAVING COUNT(Flight_id) > 50;
 
 
 -- # Area 2: Crew Logistics (Workforce Constraints)
+```sql
 --
 --
 --
 --
 --
 --
-
+```
 
 -- # Area 3: Safety & Vulnerability (Systemic Fragility)
---
---
---
---
---
---
+```sql
+-- a) Fatigue Correlation (7-Day Rolling Workload)
+--Identifies if incidents are linked to high workloads in the week prior.
+CREATE VIEW vw_FatigueCorrelation AS
+SELECT 
+    i.Incident_id,
+    i.Crew_id,
+    i.Incident_date,
+    i.Severity_level,
+    SUM(s.Total_duty_hours) as Duty_Hours_Last_7_Days,
+    CASE 
+        WHEN SUM(s.Total_duty_hours) > 50 THEN 'High Risk'
+        WHEN SUM(s.Total_duty_hours) BETWEEN 35 AND 50 THEN 'Moderate Risk'
+        ELSE 'Normal'
+    END as Fatigue_Risk_Category
+FROM crew_incident i
+JOIN [crew_scheduling ] s ON i.Crew_id = s.Crew_id
+-- Ensures we only sum duty hours from the 7 days leading up to the incident
+WHERE CAST(s.[Scheduled_date_for_starting] AS DATE) 
+      BETWEEN DATEADD(day, -7, CAST(i.Incident_date AS DATE)) AND CAST(i.Incident_date AS DATE)
+GROUP BY i.Incident_id, i.Crew_id, i.Incident_date, i.Severity_level;
 
+--b) Incident Severity Trends
+--Shows the monthly progression of safety events.
+CREATE VIEW vw_IncidentTrends AS
+SELECT 
+    -- FORMAT is perfect for SSMS to create a YYYY-MM string for Tableau
+    FORMAT(CAST(Incident_date AS DATE), 'yyyy-MM') as Incident_Month,
+    Incident_type,
+    Severity_level,
+    COUNT(Incident_id) as Incident_Count
+FROM crew_incident
+GROUP BY FORMAT(CAST(Incident_date AS DATE), 'yyyy-MM'), Incident_type, Severity_level;
+
+--c) Operational Drag (Delay Cost of Safety)
+---Quantifies the ripple effect of incidents on flight punctuality.
+CREATE VIEW vw_SafetyDelayImpact AS
+SELECT 
+    Incident_type,
+    COUNT(Incident_id) as Total_Incidents,
+    SUM(Flight_delay_minutes) as Total_Delay_Min,
+    ROUND(AVG(CAST(Flight_delay_minutes AS FLOAT)), 2) as Avg_Delay_Per_Incident
+FROM crew_incident
+GROUP BY Incident_type;
+
+-- d) Base Safety Health Index
+---Normalizes data to compare small bases and large hubs fairly.
+CREATE VIEW vw_BaseSafetyHealth AS
+WITH BaseIncidents AS (
+    SELECT Crew_base_airport, COUNT(Incident_id) as Incident_Count
+    FROM crew_incident
+    GROUP BY Crew_base_airport
+),
+BaseCrew AS (
+    SELECT Crew_base_airport, COUNT(DISTINCT Crew_id) as Unique_Crew_Count
+    FROM [crew_scheduling ]
+    GROUP BY Crew_base_airport
+)
+SELECT 
+    i.Crew_base_airport,
+    i.Incident_Count,
+    c.Unique_Crew_Count,
+    ROUND(CAST(i.Incident_Count AS FLOAT) / NULLIF(c.Unique_Crew_Count, 0), 4) as Incident_Rate_Per_Crew
+FROM BaseIncidents i
+JOIN BaseCrew c ON i.Crew_base_airport = c.Crew_base_airport;
+
+
+--e) Role-Based Safety Vulnerability
+--Shows which crew roles are most affected by specific incident types.
+CREATE VIEW vw_RoleSafetyMatrix AS
+SELECT 
+    s.Crew_role,
+    i.Incident_type,
+    COUNT(i.Incident_id) as Incident_Frequency,
+    ROUND(AVG(CAST(i.Flight_delay_minutes AS FLOAT)), 2) as Avg_Delay_Impact
+FROM crew_incident i
+INNER JOIN [crew_scheduling ] s ON i.Crew_id = s.Crew_id
+GROUP BY s.Crew_role, i.Incident_type;
+
+```
 
 -- # Area 4: Network Resiliency (Infrastructure Saturation)
+```sql
 --
 --
 --
 --
 --
 --
+```
 
