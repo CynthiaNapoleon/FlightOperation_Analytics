@@ -14,7 +14,7 @@ To prevent system-wide failure, the Operations Department commissioned this diag
 
 
 - The Excel log sheet to record all the cleaning process can be found here [link]
-- The SQL queries used to inspect the data for its quality for this analysis can be found here [link].
+- The SQL queries used to inspect the data for its quality for this analysis can be found here [link](DataQualityCheckSQL.md)
 - Targed SQL queries regarding various business questions can be found here [Link](SQLqueries.md)
 
 
