@@ -58,7 +58,7 @@ Analysis: ORD achieved a 78.49% recovery rate, outperforming the network average
 - **F) Route Predictability: SFO-LAX Volatility**
 Analysis: The SFO-LAX corridor shows a Standard Deviation of 19.61, which is 45% higher than comparable short-haul routes. This "Wild Card" trend indicates that arrival times are highly inconsistent, creating a staffing nightmare where gate agents are underutilized during early arrivals and overwhelmed during late surges.
 
-![Alt Text for Image](Dashboard1.png) 
+![Alt Text for Image]
 
 
 ## Area 2: Crew Logistics (Workforce Constraints)
