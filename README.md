@@ -30,7 +30,7 @@ Table 2:
 Table 3:
 Table 4:
 Table 5:
-![Alt Text for Image](erd.PNG)
+![Alt Text for Image](erd.png)
 
 ## **Executive Summary**
 **Overview of Findings**
