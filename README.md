@@ -60,6 +60,8 @@ Analysis: The SFO-LAX corridor shows a Standard Deviation of 19.61, which is 45%
 ![Alt Text for Image](D1.png)
 
 
+
+
 ## Area 2: Crew Logistics (Workforce Constraints)
 - **A) Base Efficiency: DEN vs. UNK Variance**
 Analysis: DEN shows a -0.05 hr duty variance, while "Unassigned" (UNK) crews show a 7-minute inefficiency gap (a 12% negative variance). This pattern proves that a lack of a structured home-base environment correlates with less disciplined duty transitions, adding nearly 400 hours of unproductive pay-time per month.
@@ -72,6 +74,8 @@ Analysis: A 12.61-hour "Inequity Gap" exists between the top and bottom deciles 
 - **E) Shift Congestion: The Daytime "Congestion Tax"**
 Analysis: The Daytime Shift (11,207 duties) carries a 28.92m delay, which is 5% higher than the "Morning Rush." This indicates that mid-day catering and security infrastructure is over-saturated, creating a hidden "tax" on every turn during the peak earning hours of the day.
 ![Alt Text for Image](D2.png)
+
+
 
 
 ## Area 3: Safety & Vulnerability (Systemic Fragility)
@@ -88,6 +92,8 @@ Analysis: A Second Officer late sign-in triggers a 79.38-minute system lag, whic
 ![Alt Text for Image](D3.png)
 
 
+
+
 ## Area 4: Network Resiliency (Infrastructure Saturation)
 - **A) The Unreliable Corridor: BOS-DEN Failure**
 Analysis: The BOS-DEN flight path operates at a 33.63% OTP, meaning it is failing 2 out of every 3 operations. This is the single lowest reliability score in the network, identifying this corridor as the primary driver of customer compensation claims and brand damage.
@@ -102,8 +108,10 @@ Analysis: The network carries a 40,710-minute "Incident Tax." This total volume 
 ![Alt Text for Image](D4.png)
 
 
-## Strategic Recommendations by Stakeholder Group:
 
+
+
+## Strategic Recommendations by Stakeholder Group:
 - **1. Network Planning & Scheduling**
 Corridor Rehabilitation (BOS-DEN): Immediate intervention is required for the BOS-DEN flight path. With a 33.63% OTP, this route requires a schedule "padding" adjustment or a shift in aircraft rotation to prevent it from remaining the network's primary reliability failure.
 Buffer Realignment: Implement a mandatory "Late-Day Buffer" for flights arriving after the 18:00 Breaking Point. By adding 15 minutes of scheduled ground time during this window, the department can reduce the 12% overnight grounding rate currently caused by the late-day delay spike.
