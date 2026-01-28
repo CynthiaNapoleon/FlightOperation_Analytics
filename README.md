@@ -57,8 +57,7 @@ Analysis: Delays peak at 25.92 minutes at 18:00, a 38% increase over midday aver
 Analysis: ORD achieved a 78.49% recovery rate, outperforming the network average by 22%. By successfully "Quick Turning" 8 out of 10 delayed aircraft, ORD serves as the gold standard for resiliency, proving that aggressive ground management can halt the propagation of network delays.
 - **F) Route Predictability: SFO-LAX Volatility**
 Analysis: The SFO-LAX corridor shows a Standard Deviation of 19.61, which is 45% higher than comparable short-haul routes. This "Wild Card" trend indicates that arrival times are highly inconsistent, creating a staffing nightmare where gate agents are underutilized during early arrivals and overwhelmed during late surges.
-
-![Alt Text for Image]
+![Alt Text for Image](D1.png)
 
 
 ## Area 2: Crew Logistics (Workforce Constraints)
@@ -72,8 +71,7 @@ Analysis: SFO and SEA average 200 extra hotel nights per month, representing 24%
 Analysis: A 12.61-hour "Inequity Gap" exists between the top and bottom deciles of ORD Cabin Crew. This 25% variance in duty load is a leading indicator for burnout; historically, bases with this level of inequity see a 15% higher rate of labor grievances and unscheduled absences.
 - **E) Shift Congestion: The Daytime "Congestion Tax"**
 Analysis: The Daytime Shift (11,207 duties) carries a 28.92m delay, which is 5% higher than the "Morning Rush." This indicates that mid-day catering and security infrastructure is over-saturated, creating a hidden "tax" on every turn during the peak earning hours of the day.
-
-[Visualization specific to category 2]
+![Alt Text for Image](D2.png)
 
 
 ## Area 3: Safety & Vulnerability (Systemic Fragility)
@@ -87,8 +85,7 @@ Analysis: Sick calls drain 3,558 minutes (58% of total safety delay volume), but
 Analysis: SFO’s incident rate (0.0737) is 18% higher than LAX. This normalized gap proves that SFO’s safety issues are not just a byproduct of size, but a localized "Safety Culture Gap" that is currently adding 5,000 extra minutes of friction per year.
 - **E) Role Vulnerability: The Second Officer Bottleneck**
 Analysis: A Second Officer late sign-in triggers a 79.38-minute system lag, which is 2.7x more severe than a Cabin Crew delay. This role-based vulnerability exposes a lack of redundancy in the junior flight deck, making the Second Officer the single most sensitive point of failure in the crew ecosystem.
-
-[Visualization specific to category 3]
+![Alt Text for Image](D3.png)
 
 
 ## Area 4: Network Resiliency (Infrastructure Saturation)
@@ -102,8 +99,7 @@ Analysis: MIA accounts for 232,683 minutes of total network impact, representing
 Analysis: ATL's 16.79% volume increase triggered a 22.68% delay spike. This proves that delays are growing 35% faster than volume, a classic indicator of physical saturation; the hub can no longer "grow" without fundamentally breaking the schedule.
 - **E) The Operational Tax: Cumulative Incident Friction**
 Analysis: The network carries a 40,710-minute "Incident Tax." This total volume of lost time represents the equivalent of grounding 3 aircraft for an entire month, effectively shrinking the airline’s available assets and making the entire system increasingly brittle
-
-[Visualization specific to category 4]
+![Alt Text for Image](D4.png)
 
 
 ## Strategic Recommendations by Stakeholder Group:
