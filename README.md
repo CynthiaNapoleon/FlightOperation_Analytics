@@ -24,14 +24,13 @@ To prevent system-wide failure, the Operations Department commissioned this diag
 - For Ground Operations & Infrastructure ->to help them manage the physical "turn" of the aircraft and hub capacity, the dashboard can be found here <a href="https://public.tableau.com/app/profile/cynthia.napoleon/viz/Flight_Operations_AuroraPacificAirways/Dashboard4">[link]<a>
 
 ## **Data Structure & Initial Checks**
-The companies main database structure as seen below consists of four tables: table1, table2, table3, table4, with a total row count of X records. A description of each table is as follows:
+The companies main database structure as seen below consists of three tables: table1, table2, table3, table4, with a total row count of X records. A description of each table is as follows:
 
 Table 2:
 Table 3:
 Table 4:
 Table 5:
-[Entity Relationship Diagram here]
-
+![Alt Text for Image](erd.PNG)
 
 ## **Executive Summary**
 **Overview of Findings**
