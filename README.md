@@ -13,7 +13,7 @@ To prevent system-wide failure, the Operations Department commissioned this diag
 **The Goal:** Shift from "Reactive Firefighting" to "Proactive Resilience"—reclaiming lost minutes and bulletproofing the 2025 schedule.
 
 
-- The log to record all the cleaning process in Excel can be found here [link]
+- The log to record all the cleaning process in Excel can be found here [Link](CleaningLog.md)
 - The SQL queries used to inspect the data for its quality for this analysis can be found here [Link](DataQualityCheckSQL.md)
 - Targed SQL queries regarding various business questions can be found here [Link](SQLqueries.md)
 
