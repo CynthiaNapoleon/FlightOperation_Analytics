@@ -15,7 +15,8 @@ To prevent system-wide failure, the Operations Department commissioned this diag
 
 - The Excel log sheet to record all the cleaning process can be found here [link]
 - The SQL queries used to inspect the data for its quality for this analysis can be found here [link].
-- Targed SQL queries regarding various business questions can be found here [link].
+- Targed SQL queries regarding various business questions can be found here ![Alt Text for Image](SQLqueries.md)
+
 
 **4 Tableau dashboards for 4 groups of Stakeholders in the Operations Department of Aurora Pacific Airways can be found below:**
 - For Network Planning & Scheduling Stakeholder -> to help them design a flight schedule that is time efficient and reliable, the dashboard can be found here <a href="https://public.tableau.com/app/profile/cynthia.napoleon/viz/Flight_Operations_AuroraPacificAirways/Dashboard1">[link]<a>
