@@ -10,7 +10,7 @@ To prevent system-wide failure, the Operations Department commissioned this diag
 - **3)Safety & Vulnerability:** To analyze the relationship between procedural safety and operational reliability.
 - **4)Infrastructure Management:** To determine which airports of the APA network have reached a point of physical saturation.
 
-## The Goal: Shift from "Reactive Firefighting" to "Proactive Resilience"—reclaiming lost minutes and bulletproofing the 2025 schedule.
+# The Goal: Shift from "Reactive Firefighting" to "Proactive Resilience"—reclaiming lost minutes and bulletproofing the 2025 schedule.
 
 
 - The Excel log sheet to record all the cleaning process can be found here [link]
