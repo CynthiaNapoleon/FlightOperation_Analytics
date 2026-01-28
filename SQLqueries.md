@@ -175,6 +175,8 @@ GROUP BY
 
 ```
 
+
+
 -- # Area 3: Safety & Vulnerability (Systemic Fragility)
 ```sql
 -- a) Is our safety risk being driven by crew exhaustion from previous workloads? (Correlation of 7-day rolling duty hours against Fatigue_Risk_Category)
@@ -243,6 +245,7 @@ FROM BaseIncidents i
 JOIN BaseCrew c ON i.Crew_base_airport = c.Crew_base_airport;
 
 
+
 --e) Which crew roles represent the most severe operational vulnerability during a crisis? (Role vs. Incident Type Matrix).
 --Shows which crew roles are most affected by specific incident types.
 CREATE VIEW vw_RoleSafetyMatrix AS
@@ -256,6 +259,8 @@ INNER JOIN [crew_scheduling ] s ON i.Crew_id = s.Crew_id
 GROUP BY s.Crew_role, i.Incident_type;
 
 ```
+
+
 
 -- # Area 4: Network Resiliency (Infrastructure Saturation)
 ```sql
