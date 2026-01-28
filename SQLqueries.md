@@ -95,7 +95,7 @@ HAVING COUNT(Flight_id) > 50;
 
 -- # Area 2: Crew Logistics (Workforce Constraints)
 ```sql
---a) Base Efficiency Benchmarking
+--a) Is our base network operating at a consistent efficiency? 
 --Calculates how each crew base performs compared to the corporate average.
 CREATE VIEW vw_BaseEfficiency AS
 WITH BaseStats AS (
@@ -116,7 +116,7 @@ SELECT
     ROUND(Avg_Base_Duty - AVG(Avg_Base_Duty) OVER(), 2) as Duty_Variance
 FROM BaseStats;
 
---b) Role-Based Delay Impact
+--b) Which professional groups face the most friction starting their day? 
 --Identifies which crew roles (Pilots, Cabin Crew) face the most friction at sign-in.
 CREATE VIEW vw_RoleDelayImpact AS
 SELECT 
@@ -127,7 +127,7 @@ SELECT
 FROM crew_scheduling
 GROUP BY Crew_role;
 
---c) Layover Optimization
+--c) Where are we paying for "Idle Time" instead of "Flying Time"? (Layover Optimization - Instances > 24 hours)
 --Highlights bases where crew are sitting idle for too long.
 CREATE VIEW vw_LayoverOptimization AS
 SELECT 
@@ -138,7 +138,7 @@ SELECT
 FROM crew_scheduling
 GROUP BY Crew_base_airport;
 
---d) Workload Equity Analysis
+--d) Is the workload distributed fairly across our people? (Workload Equity - StdDev of Duty Hours).
 --Uses STDEV to see if some crew members are overworked while others are underutilized.
 CREATE VIEW vw_WorkloadEquity AS
 SELECT 
@@ -151,7 +151,7 @@ FROM crew_scheduling
 GROUP BY Crew_base_airport, Crew_role
 HAVING COUNT(*) > 5;
 
---e) Duty Start Clusters (Shift Analysis)
+--e) Is our "Morning Rush" the cause of our daily delays? (Duty Start Clusters / Shift Analysis).
 --Groups shifts into categories to find "problem times."
 CREATE VIEW vw_DutyStartClusters AS
 SELECT 
@@ -177,7 +177,7 @@ GROUP BY
 
 -- # Area 3: Safety & Vulnerability (Systemic Fragility)
 ```sql
--- a) Fatigue Correlation (7-Day Rolling Workload)
+-- a) Is our safety risk being driven by crew exhaustion from previous workloads? (Correlation of 7-day rolling duty hours against Fatigue_Risk_Category)
 --Identifies if incidents are linked to high workloads in the week prior.
 CREATE VIEW vw_FatigueCorrelation AS
 SELECT 
@@ -198,7 +198,7 @@ WHERE CAST(s.[Scheduled_date_for_starting] AS DATE)
       BETWEEN DATEADD(day, -7, CAST(i.Incident_date AS DATE)) AND CAST(i.Incident_date AS DATE)
 GROUP BY i.Incident_id, i.Crew_id, i.Incident_date, i.Severity_level;
 
---b) Incident Severity Trends
+--b) Are we successfully managing the frequency of "Critical" safety events month-over-month? (Aggregating Incident_Count by month and Severity_level).
 --Shows the monthly progression of safety events.
 CREATE VIEW vw_IncidentTrends AS
 SELECT 
@@ -210,7 +210,7 @@ SELECT
 FROM crew_incident
 GROUP BY FORMAT(CAST(Incident_date AS DATE), 'yyyy-MM'), Incident_type, Severity_level;
 
---c) Operational Drag (Delay Cost of Safety)
+--c) Which specific incident types are the primary drivers of our total network delay? (Ranking incident types by Total_Delay_Min and Avg_Delay).
 ---Quantifies the ripple effect of incidents on flight punctuality.
 CREATE VIEW vw_SafetyDelayImpact AS
 SELECT 
@@ -221,7 +221,7 @@ SELECT
 FROM crew_incident
 GROUP BY Incident_type;
 
--- d) Base Safety Health Index
+-- d) Which regional bases are the "Safety Leaders" vs. our highest risk hotspots? (Comparing normalized Incident_Rate_Per_Crew).
 ---Normalizes data to compare small bases and large hubs fairly.
 CREATE VIEW vw_BaseSafetyHealth AS
 WITH BaseIncidents AS (
@@ -243,7 +243,7 @@ FROM BaseIncidents i
 JOIN BaseCrew c ON i.Crew_base_airport = c.Crew_base_airport;
 
 
---e) Role-Based Safety Vulnerability
+--e) Which crew roles represent the most severe operational vulnerability during a crisis? (Role vs. Incident Type Matrix).
 --Shows which crew roles are most affected by specific incident types.
 CREATE VIEW vw_RoleSafetyMatrix AS
 SELECT 
@@ -259,11 +259,99 @@ GROUP BY s.Crew_role, i.Incident_type;
 
 -- # Area 4: Network Resiliency (Infrastructure Saturation)
 ```sql
---
---
---
---
---
---
+--a)Which flight paths are our most unreliable?
+--Shows the "reliability" of specific flight paths.
+CREATE VIEW vw_RouteOTPAudit AS
+SELECT 
+    Origin_airport,
+    Destination_airport,
+    COUNT(Flight_id) as Total_Flights,
+    SUM(CASE WHEN Delay_in_departure_min <= 15 THEN 1 ELSE 0 END) as On_Time_Flights,
+    ROUND(CAST(SUM(CASE WHEN Delay_in_departure_min <= 15 THEN 1 ELSE 0 END) AS FLOAT) / 
+          NULLIF(COUNT(Flight_id), 0) * 100, 2) as OTP_Percentage
+FROM flight_ops
+GROUP BY Origin_airport, Destination_airport
+HAVING COUNT(Flight_id) > 10;
+
+
+--b Are we pushing our human assets to the breaking point?
+CREATE VIEW vw_CrewFatigueRisk AS
+SELECT 
+    Crew_id,
+    Crew_duty_id,
+    Actual_date_for_starting,
+    Total_duty_hours,
+    -- Calculates the sum of duty hours for the current record + the 6 preceding duty records for that crew member
+    SUM(Total_duty_hours) OVER (
+        PARTITION BY Crew_id 
+        ORDER BY CAST(Actual_date_for_starting AS DATE) 
+        ROWS BETWEEN 6 PRECEDING AND CURRENT ROW
+    ) AS Rolling7DayTotalHours,
+    -- Categorizing risk based on typical aviation safety thresholds
+    CASE 
+        WHEN SUM(Total_duty_hours) OVER (PARTITION BY Crew_id ORDER BY CAST(Actual_date_for_starting AS DATE) ROWS BETWEEN 6 PRECEDING AND CURRENT ROW) > 50 THEN 'High Risk'
+        WHEN SUM(Total_duty_hours) OVER (PARTITION BY Crew_id ORDER BY CAST(Actual_date_for_starting AS DATE) ROWS BETWEEN 6 PRECEDING AND CURRENT ROW) BETWEEN 40 AND 50 THEN 'Medium Risk'
+        ELSE 'Safe'
+    END AS FatigueStatus
+FROM dbo.Crew_Scheduling;
+
+--c) Which hub acts as the network's single point of failure? 
+---Visualizes which airports are "bottlenecks" for the rest of the network.
+CREATE VIEW vw_HubDependencyRisk AS
+SELECT 
+    Origin_airport,
+    COUNT(DISTINCT Destination_airport) as Destinations_Served,
+    ROUND(AVG(CAST(Delay_in_departure_min AS FLOAT)), 2) as Avg_Hub_Delay,
+    ROUND(SUM(CAST(Delay_in_departure_min AS FLOAT)), 0) as Total_Network_Impact_Min
+FROM flight_ops
+GROUP BY Origin_airport;
+
+--d) Where is our infrastructure failing to scale? (Month-over-Month Volume Growth vs. Delay Growth)
+--We need the month from the scheduling table to calculate the growth metrics for the flights.
+CREATE VIEW vw_SeasonalStrain AS
+WITH HubMonthly AS (
+    SELECT 
+        f.Origin_airport,
+        s.Roster_month,
+        COUNT(f.Flight_id) as Flight_Count,
+        SUM(CAST(f.Delay_in_departure_min AS FLOAT)) as Total_Delays
+    FROM flight_ops f
+    JOIN [crew_scheduling ] s ON f.Scheduled_departure_date = s.[Scheduled_date_for_starting]
+    GROUP BY f.Origin_airport, s.Roster_month
+),
+GrowthStats AS (
+    SELECT 
+        Origin_airport,
+        Roster_month,
+        Flight_Count,
+        LAG(Flight_Count) OVER (PARTITION BY Origin_airport ORDER BY Roster_month) as Prev_Flight_Count,
+        Total_Delays,
+        LAG(Total_Delays) OVER (PARTITION BY Origin_airport ORDER BY Roster_month) as Prev_Total_Delays
+    FROM HubMonthly
+)
+SELECT 
+    Origin_airport,
+    Roster_month,
+    Flight_Count,
+    Total_Delays,
+    ROUND(((CAST(Flight_Count AS FLOAT) - Prev_Flight_Count) / NULLIF(Prev_Flight_Count, 0)) * 100, 2) as Vol_Growth_Pct,
+    ROUND(((CAST(Total_Delays AS FLOAT) - Prev_Total_Delays) / NULLIF(Prev_Total_Delays, 0)) * 100, 2) as Delay_Growth_Pct
+FROM GrowthStats;
+	
+
+--e) What is the total "Incident Tax" currently burdening the entire network? (Aggregating incident delays to measure system friction).
+CREATE VIEW vw_IncidentOpImpact AS
+SELECT 
+    ci.Incident_type,
+    ci.Severity_level,
+    COUNT(ci.Incident_id) AS IncidentCount,
+    AVG(fo.Delay_in_departure_min) AS AvgDelayMinutes,
+    SUM(fo.Delay_in_departure_min) AS TotalLostMinutes
+FROM dbo.Crew_Incidents ci
+JOIN dbo.Flight_Operations fo 
+    ON ci.Crew_id = fo.Crew_id 
+    AND ci.Incident_date = fo.scheduled_departure_date
+GROUP BY ci.Incident_type, ci.Severity_level;
+
 ```
 
