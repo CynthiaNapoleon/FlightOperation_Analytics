@@ -107,7 +107,6 @@ UNION ALL
 SELECT 'Zero/Negative Rest' as Issue, COUNT(*) FROM [crew_scheduling ] WHERE Layover_duration_hours <= 0;
 
 
---do cleaning script for the above and uniqueness script.and see if there any dq scripts for crew incidents.
 --Cleaning for duty hours and negative rest 
 -- 1. Cap extreme duty hours to 20 to preserve the record but limit skew
 UPDATE [crew_scheduling ]
