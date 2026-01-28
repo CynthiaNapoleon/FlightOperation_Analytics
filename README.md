@@ -42,9 +42,9 @@ The audit identifies several critical failure points:
 - **The March Stress Spike:** Safety performance dipped to an annual low in March, which alone accounted for 22% of all yearly incidents.
 The Domino Effect: Ground efficiency in laggard bases has hit a trough, "leaking" 5 minutes per turn and triggering mandatory overnight groundings at SFO due to the 18:00 "Breaking Point.”
 
-## **Insights Deep Dive**
+# **Insights Deep Dive**
 
-# Area 1: Network Operations (Network Congestion Audit)
+## Area 1: Network Operations (Network Congestion Audit)
 - **A) Hub Bottlenecks: SFO Aircraft Rotation**
 Analysis: SFO recorded 639 occurrences of Aircraft Rotation delays, representing 42% of all rotation-linked friction in the network. This metric confirms that SFO is a "downstream victim"; historically, the hub isn't failing locally, but is absorbing significant late arrivals, creating a "domino effect" that prevents the base from ever reaching a "clean" operational state.
 - **B) Fleet Reliability: Tail N0076QX**
