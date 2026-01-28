@@ -24,13 +24,11 @@ To prevent system-wide failure, the Operations Department commissioned this diag
 - For Ground Operations & Infrastructure ->to help them manage the physical "turn" of the aircraft and hub capacity, the dashboard can be found here <a href="https://public.tableau.com/app/profile/cynthia.napoleon/viz/Flight_Operations_AuroraPacificAirways/Dashboard4">[link]<a>
 
 ## **Data Structure & Initial Checks**
-The companies main database structure as seen below consists of three tables: table1, table2, table3, table4, with a total row count of X records. A description of each table is as follows:
+The companies main database structure as seen below consists of three tables: Flight Operations(FlightOps), Crew Scheduling(Crew_scheduling), and Crew Incidents(Crew_incidents) with a total row count of 1,20,902 records. A description of each table is as follows:
 
-Table 2:
-Table 3:
-Table 4:
-Table 5:
 ![Alt Text for Image](erd.png)
+
+
 
 ## **Executive Summary**
 **Overview of Findings**
