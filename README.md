@@ -63,11 +63,11 @@ Analysis: The SFO-LAX corridor shows a Standard Deviation of 19.61, which is 45%
 
 
 ## Area 2: Crew Logistics (Workforce Constraints)
-- **A) Base Efficiency: DEN vs. UNK Variance**
+- **A) Base Efficiency- DEN vs. UNK Variance**\
 Analysis: DEN shows a -0.05 hr duty variance, while "Unassigned" (UNK) crews show a 7-minute inefficiency gap (a 12% negative variance). This pattern proves that a lack of a structured home-base environment correlates with less disciplined duty transitions, adding nearly 400 hours of unproductive pay-time per month.
-- **B) Role Friction: Captain Sign-in Bottlenecks**
+- **B) Role Friction- Captain Sign-in Bottlenecks**<br>
 Analysis: Captains face a 29.05-minute sign-in friction, contributing to 31% of all role-based departure delays. As the "Critical Path" role, this friction is the primary bottleneck; the flight is legally immobilized until the Captain clears, making this the highest-priority target for logistical streamlining.
-- **C) Idle Time Costs: SFO/SEA Layover Overages**
+- **C) Idle Time Costs- SFO/SEA Layover Overages**
 Analysis: SFO and SEA average 200 extra hotel nights per month, representing 24% of the total network lodging budget. This "Schedule Mismatch" highlights a historical failure to align flight arrivals with minimum rest periods, resulting in millions in avoidable annual overhead.
 - **D) Workload Equity: The ORD Inequity Gap**
 Analysis: A 12.61-hour "Inequity Gap" exists between the top and bottom deciles of ORD Cabin Crew. This 25% variance in duty load is a leading indicator for burnout; historically, bases with this level of inequity see a 15% higher rate of labor grievances and unscheduled absences.
