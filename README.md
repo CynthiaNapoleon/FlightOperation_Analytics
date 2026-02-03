@@ -45,18 +45,18 @@ The Domino Effect: Ground efficiency in laggard bases has hit a trough, "leaking
 # **Insights Deep Dive**
 
 ## Area 1: Network Operations (Network Congestion Audit)
-- **A) Hub Bottlenecks: SFO Aircraft Rotation**
-Analysis: SFO recorded 639 occurrences of Aircraft Rotation delays, representing 42% of all rotation-linked friction in the network. This metric confirms that SFO is a "downstream victim"; historically, the hub isn't failing locally, but is absorbing significant late arrivals, creating a "domino effect" that prevents the base from ever reaching a "clean" operational state.
-- **B) Fleet Reliability: Tail N0076QX**
-Analysis: In September 2024, Tail N0076QX recorded 10 cancellations, accounting for 15% of the entire fleet's monthly cancellations despite being only one aircraft. This "Problem Child" trend forces the NOCC to scramble for spare aircraft 51% more often than average, creating a performance drain on standby reserves.
-- **C) Utilization: Port-to-Port Variance**
-Analysis: SFO maintains a -74.37 min variance, while BOS and ORD "leak" roughly 5 minutes per turn (a 7% efficiency gap). This pattern reveals that East Coast ground process sluggishness is essentially "bleeding" potential flight time, resulting in a cumulative loss of capacity that could have supported two additional daily rotations.
-- **D) Network Vulnerability: The 18:00 Breaking Point**
-Analysis: Delays peak at 25.92 minutes at 18:00, a 38% increase over midday averages. This late-day spike is a critical failure point; historically, these minutes are unrecoverable due to curfew and crew rest rules, leading directly to the overnight grounding of 12% of the affected fleet.
-- **E) Schedule Recovery: ORD Quick-Turn Efficiency**
-Analysis: ORD achieved a 78.49% recovery rate, outperforming the network average by 22%. By successfully "Quick Turning" 8 out of 10 delayed aircraft, ORD serves as the gold standard for resiliency, proving that aggressive ground management can halt the propagation of network delays.
-- **F) Route Predictability: SFO-LAX Volatility**
-Analysis: The SFO-LAX corridor shows a Standard Deviation of 19.61, which is 45% higher than comparable short-haul routes. This "Wild Card" trend indicates that arrival times are highly inconsistent, creating a staffing nightmare where gate agents are underutilized during early arrivals and overwhelmed during late surges.
+- **A) Hub Bottlenecks: SFO Aircraft Rotation Analysis:**\
+SFO recorded 639 occurrences of Aircraft Rotation delays, representing 42% of all rotation-linked friction in the network. This metric confirms that SFO is a "downstream victim"; historically, the hub isn't failing locally, but is absorbing significant late arrivals, creating a "domino effect" that prevents the base from ever reaching a "clean" operational state.
+- **B) Fleet Reliability: Tail N0076QX Analysis:**\
+In September 2024, Tail N0076QX recorded 10 cancellations, accounting for 15% of the entire fleet's monthly cancellations despite being only one aircraft. This "Problem Child" trend forces the NOCC to scramble for spare aircraft 51% more often than average, creating a performance drain on standby reserves.
+- **C) Utilization: Port-to-Port Variance Analysis:**\
+SFO maintains a -74.37 min variance, while BOS and ORD "leak" roughly 5 minutes per turn (a 7% efficiency gap). This pattern reveals that East Coast ground process sluggishness is essentially "bleeding" potential flight time, resulting in a cumulative loss of capacity that could have supported two additional daily rotations.
+- **D) Network Vulnerability: The 18:00 Breaking Point Analysis:**\
+Delays peak at 25.92 minutes at 18:00, a 38% increase over midday averages. This late-day spike is a critical failure point; historically, these minutes are unrecoverable due to curfew and crew rest rules, leading directly to the overnight grounding of 12% of the affected fleet.
+- **E) Schedule Recovery: ORD Quick-Turn Efficiency Analysis:**\
+ORD achieved a 78.49% recovery rate, outperforming the network average by 22%. By successfully "Quick Turning" 8 out of 10 delayed aircraft, ORD serves as the gold standard for resiliency, proving that aggressive ground management can halt the propagation of network delays.
+- **F) Route Predictability: SFO-LAX Volatility Analysis:**\
+The SFO-LAX corridor shows a Standard Deviation of 19.61, which is 45% higher than comparable short-haul routes. This "Wild Card" trend indicates that arrival times are highly inconsistent, creating a staffing nightmare where gate agents are underutilized during early arrivals and overwhelmed during late surges.
 ![Alt Text for Image](D1.png)
 
 
