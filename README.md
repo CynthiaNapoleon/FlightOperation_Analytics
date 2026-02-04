@@ -1,4 +1,4 @@
-# Aviation Operations Analysis: Aurora Pacific Airways Resilence Audit 
+# Aviation Operations Analysis: Aurora Pacific Airways resilience Audit 
  A SQL driven diagonstic analysis of the existing flight operation data comprising for scheduling, crew bases, crew and incidents. Excel has been leveraged for data pre-processing, SQL for surfacing business questions and Tableau for executive-level storytelling, this project transforms 120k+records into a proactive risk management framework. 
 
 ## **Project Background**
