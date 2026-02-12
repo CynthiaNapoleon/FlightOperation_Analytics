@@ -45,8 +45,12 @@ The Domino Effect: Ground efficiency in laggard bases has hit a trough, "leaking
 # **Insights Deep Dive**
 
 ## Area 1: Network Operations (Network Congestion Audit)
-- **A) Hub Bottlenecks: SFO Aircraft Rotation Analysis:**\
-SFO recorded 639 occurrences of Aircraft Rotation delays, representing 42% of all rotation-linked friction in the network. This metric confirms that SFO is a "downstream victim"; historically, the hub isn't failing locally, but is absorbing significant late arrivals, creating a "domino effect" that prevents the base from ever reaching a "clean" operational state.
+- **A) The "Turnaround" Trap: Network-Wide Delay Propagation**\
+Our operational efficiency is currently hindered by a systemic "knock-on" effect. Aircraft Rotation (late incoming flights) is a primary bottleneck across our network, appearing as a
+top-three delay reason at 80% of our major hubs (8 out of 10). It accounts for 26.8% of all high-frequency delay occurrences (5,156 instances) in this dataset. With an average delay of
+29.1 minutes per occurrence, these rotation delays represent a network-wide instability rather than isolated terminal issues.
+To improve the situation, focus should be on improving turnaround buffers and gate management at the 8 identified hubs. Reducing rotation-related delays by even 10% would reclaim approximately 2,500 minutes of flight time per cycle, preventing single late arrivals from cascading into day-long schedule disruptions.
+![Alt Text for Image](A1-1.png)
 - **B) Fleet Reliability: Tail N0076QX Analysis:**\
 In September 2024, Tail N0076QX recorded 10 cancellations, accounting for 15% of the entire fleet's monthly cancellations despite being only one aircraft. This "Problem Child" trend forces the NOCC to scramble for spare aircraft 51% more often than average, creating a performance drain on standby reserves.
 - **C) Utilization: Port-to-Port Variance Analysis:**\
