@@ -61,8 +61,8 @@ month, a subset of five aircraft—N0109QX, N0089QX, N0078QX, N0055QX, and
 N0052QX—remained in a "High Risk" state (exceeding 8 monthly cancellations) for 50% of
 the year, accounting for 474 total cancellations in 2024. This frequency of alert indicates a
 systemic failure in the maintenance lifecycle rather than isolated incidents, with their
-collective 15% cancellation rate nearly doubling the fleet norm. To protect passenger
-revenue and stabilize the network, we must move these "Chronic Five" from reactive repairs
+collective 15% cancellation rate nearly doubling the fleet norm.\
+**Recommendation**: To protect passenger revenue and stabilize the network, we must move these "Chronic Five" from reactive repairs
 to an accelerated heavy-maintenance overhaul, a move that would theoretically prevent over
 100 cancellations annually.
 ![Alt Text for Image](images/A1-B.png)
