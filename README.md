@@ -51,7 +51,7 @@ top-three delay reason at 80% of our major hubs (8 out of 10). It accounts for 2
 29.1 minutes per occurrence, these rotation delays represent a network-wide instability rather than isolated terminal issues.
 To improve the situation, focus should be on improving turnaround buffers and gate management at the 8 identified hubs. Reducing rotation-related delays by even 10% would reclaim approximately 2,500 minutes of flight time per cycle, preventing single late arrivals from cascading into day-long schedule disruptions.
 ![Alt Text for Image](images/A1-A.png)
-
+<br/>
 - **B) The "Chronic Five": Identifying Fleet-Wide Reliability Outliers:**\
 A full-year analysis reveals that fleet instability is driven by a specific group of persistent "bad
 actors" rather than random external events. While the fleet averages 6.4 cancellations per
