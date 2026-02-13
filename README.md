@@ -178,7 +178,7 @@ time.\
 **Recommendation**: By re-optimizing crew pairings specifically out of the West Coast hubs to reduce these
 24h+ gaps, we can significantly lower non-operational labor costs without impacting flight
 frequency.
-![Alt Text for Image](images/A2-B.png)
+![Alt Text for Image](images/A2-C.png)
 <br/>
 
 
@@ -192,7 +192,7 @@ cycle. This extreme variance indicates a lack of schedule "smoothing" at ORD.\
 **Recommendation**: We could re-distribute these "peak" duty hours more equitably across the 1,598 crew members at the
 ORD base, and thus reduce the risk of fatigue-related errors and improve overall employee
 retention.
-![Alt Text for Image](images/A2-C.png)
+![Alt Text for Image](images/A2-D.png)
 <br/>
 
 
