@@ -40,7 +40,7 @@ The audit identifies several critical failure points:
 - **The Second Officer Bottleneck:** Operational stability sank to its lowest point during junior flight-deck delays; a single late sign-in triggers a 79-minute system lag—the most lethal role-based delay in the fleet.
 - **Human Capital Depletion:** A major risk factor was the sick calls that account for 58% of all safety-related time loss.
 - **The March Stress Spike:** Safety performance dipped to an annual low in March, which alone accounted for 22% of all yearly incidents.
--**The Domino Effect:** Ground efficiency in laggard bases has hit a trough, "leaking" 5 minutes per turn and triggering mandatory overnight groundings at SFO due to the 18:00 "Breaking Point.”
+- **The Domino Effect:** Ground efficiency in laggard bases has hit a trough, "leaking" 5 minutes per turn and triggering mandatory overnight groundings at SFO due to the 18:00 "Breaking Point.”
 
 
 
