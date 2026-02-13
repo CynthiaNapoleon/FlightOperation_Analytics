@@ -129,8 +129,7 @@ lack of predictability forces the airline to carry excess "buffer" fuel and staf
 the wide range of possible outcomes.\
 **Recommendation**: To stabilize this route, we could transition from static
 scheduling to "Dynamic Buffer Allocation"—specifically increasing the scheduled block time
-by 5 minutes for this specific leg to move it out of the high-volatility zone and improve our
-on-time predictability.
+by 5 minutes for this specific leg to move it out of the high-volatility zone and improve our on-time predictability.
 ![Alt Text for Image](images/A1-F.png)
 <br/>
 
