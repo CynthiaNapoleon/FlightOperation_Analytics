@@ -50,10 +50,7 @@ Our operational efficiency is currently hindered by a systemic "knock-on" effect
 top-three delay reason at 80% of our major hubs (8 out of 10). It accounts for 26.8% of all high-frequency delay occurrences (5,156 instances) in this dataset. With an average delay of
 29.1 minutes per occurrence, these rotation delays represent a network-wide instability rather than isolated terminal issues.
 To improve the situation, focus should be on improving turnaround buffers and gate management at the 8 identified hubs. Reducing rotation-related delays by even 10% would reclaim approximately 2,500 minutes of flight time per cycle, preventing single late arrivals from cascading into day-long schedule disruptions.
-![Alt Text for Image](images/A1-A.png)<br />
-
-
-
+![Alt Text for Image](images/A1-A.png)
 
 - **B) The "Chronic Five": Identifying Fleet-Wide Reliability Outliers:**\
 A full-year analysis reveals that fleet instability is driven by a specific group of persistent "bad
@@ -66,6 +63,7 @@ collective 15% cancellation rate nearly doubling the fleet norm. To protect pass
 revenue and stabilize the network, we must move these "Chronic Five" from reactive repairs
 to an accelerated heavy-maintenance overhaul, a move that would theoretically prevent over
 100 cancellations annually.
+![Alt Text for Image](images/A1-B.png)
 
 - **C) Capacity Drain:: Reclaiming Revenue Time from "Sluggish" Hubs:**\
 Ground operations at BOS and ORD are currently the primary drivers of fleet
@@ -77,6 +75,8 @@ improved their ground processes to simply match the fleet average, we would recl
 approximately 3-4 minutes of flight availability per rotation. Stakeholders should prioritize a
 ground-handling audit at these high-variance hubs to convert "idle gate time" back into
 "revenue-generating air time."
+![Alt Text for Image](images/A1-C.png)
+
 - **D) Network Vulnerability: The 18:00 System Fatigue:**\
  Our network reaches its maximum operational vulnerability at 18:00 (6:00 PM), a window
 we’ve identified as the true "System Sickness" hour because delays reach their daily peak of
@@ -88,9 +88,9 @@ this, we must implement a "Mid-day Operational Reset" between 1:00 PM and 3:00 P
 strategically increasing buffers during this lower-volume window to clear residual stress, we
 can prevent the 6:00 PM breaking point and reclaim an estimated 2-3 minutes of flight time
 per evening rotation.
+![Alt Text for Image](images/A1-D.png)
 
 - **E) The "Resiliency Champion": ORD’s Superior Schedule Recovery:**\
-
 Our analysis identifies Chicago O'Hare (ORD) as the network’s leader in operational
 resiliency, successfully "catching up" the schedule for 78% of its delayed flights. While the
 fleet average for recovery is roughly 75%, ORD’s performance stands in stark contrast to
@@ -101,6 +101,8 @@ directly through to the next leg. To stabilize the broader network, we should in
 ORD's specific ground-handling protocols—such as their "pre-departure sequencing" or
 "gate-side maintenance agility"—and export these best practices to lower-performing
 stations like SFO and JFK to prevent delay propagation.
+![Alt Text for Image](images/A1-E.png)
+
 - **F)The "Wild Card" Route: Managing the Volatility of SFO-LAX:**\
 Our "Volatility Matrix" reveals that SFO-LAX is one of the most unpredictable segments in
 the network, categorized as a "High-Risk Wild Card" due to its combination of high average
@@ -113,8 +115,7 @@ the wide range of possible outcomes. To stabilize this route, we should transiti
 scheduling to "Dynamic Buffer Allocation"—specifically increasing the scheduled block time
 by 5 minutes for this specific leg to move it out of the high-volatility zone and improve our
 on-time predictability.
-
-![Alt Text for Image](D1.png)
+![Alt Text for Image](images/A1-F.png)
 
 
 
@@ -131,6 +132,8 @@ thousands of monthly rotations, it represents a significant drain on labor produ
 recapture this lost time, we should treat DEN as the "Center of Excellence" and perform a
 deep-dive into their briefing and debarkation workflows to standardize these efficiencies
 across the lagging bases.
+![Alt Text for Image](images/A2-A.png)
+
 - **B) Human Capital Friction: Addressing the "Captain's Bottleneck":**\
 The analysis of start-of-day friction across different professional groups identifies Captains
 as facing the most significant obstacles, with an average start delay of 29.05 minutes. While
@@ -142,6 +145,8 @@ requirement for an aircraft to push back, this friction acts as a direct throttl
 punctuality. Reducing Captain-specific sign-in delays to match even the First Officer's level
 (28.55 min) would create a more synchronized flight deck and remove a primary human
 obstacle to achieving a sharp, on-time departure.
+![Alt Text for Image](images/A2-A.png)
+
 - **C) Idle Time Risk: High-Cost Layovers in SFO and SEA:**\
 Our network currently holds 499 instances of layovers exceeding 24 hours, representing a
 significant concentration of "Idle Time" where the company is paying for hoteling and
@@ -150,7 +155,9 @@ and Seattle (SEA) as the primary risk centers, accounting for 95 and 91 long-lay
 instances respectively. These two bases alone represent nearly 37% of our high-cost idle
 time. By re-optimizing crew pairings specifically out of the West Coast hubs to reduce these
 24h+ gaps, we can significantly lower non-operational labor costs without impacting flight
-frequency
+frequency.
+![Alt Text for Image](images/A2-B.png)
+
 - **D) Workload Equity Gap: Addressing the "Burnout Risk" at ORD:**\
 Our assessment of workload distribution for Cabin Crew identifies Chicago O’Hare (ORD) as
 the primary outlier for potential burnout and labor dissatisfaction. ORD shows the highest
@@ -161,6 +168,7 @@ cycle. This extreme variance indicates a lack of schedule "smoothing" at ORD. By
 re-distributing these "peak" duty hours more equitably across the 1,598 crew members at the
 ORD base, we can reduce the risk of fatigue-related errors and improve overall employee
 retention.
+![Alt Text for Image](images/A2-C.png)
 
 - **E) Shift Congestion Analysis: Debunking the "Morning Rush" Myth**\
 Contrary to operational assumptions, the "Early Morning Rush" is not the primary driver of
@@ -172,8 +180,9 @@ peak volume with peak delay suggests that our ground infrastructure and gate cap
 being overwhelmed during midday operations. To improve overall network health, we should
 investigate shifting non-critical maintenance or training activities out of this "Daytime Peak"
 to alleviate the strain on resources.
+![Alt Text for Image](images/A2-E.png)
 
-![Alt Text for Image](D2.png)
+
 
 
 
@@ -190,6 +199,8 @@ less than 10 hours per week—well below the industry threshold for chronic fati
 environmental rather than physiological. Instead of focusing on workload reduction to
 improve safety, the department should pivot toward auditing specific operational tasks and
 cockpit/cabin procedures.
+![Alt Text for Image](images/A3-A.png)
+
 - **B) Network Safety Velocity: Volatility in Critical Incident Management:**\
 Our analysis of monthly incident trends reveals that we are not yet successfully
 "extinguishing" critical safety events; rather, we are managing them in a cyclical, volatile
@@ -201,6 +212,8 @@ permanently integrated into the network's long-term safety DNA. To break this cy
 must move beyond reactive "event-based" responses and investigate the shared
 environmental or operational triggers that cause these 5-incident clusters to resurface
 periodically.
+![Alt Text for Image](images/A3-B.png)
+
 - **C)The Efficiency Paradox: High-Volume Friction vs. High-Severity Shocks:**\
 Our network delay profile is split between two distinct operational threats. Sick Calls are the
 primary "Volume Drain," costing the network 3,558 total minutes—the equivalent of losing
@@ -211,6 +224,8 @@ reliability (Sick Calls) is our most frequent tax, our procedural failures (Huma
 our most disruptive "show-stoppers." To stabilize the network, we must simultaneously
 improve reserve crew depth and harden procedural guardrails to reduce the massive
 recovery time required for human error.
+![Alt Text for Image](images/A3-C.png)
+
 - **D)Base Safety Health: Normalizing Risk vs. Volume:**\
 By normalizing incidents against unique crew counts, we have identified SFO (7.37%) and
 ORD (7.20%) as our primary risk hotspots. While these bases have high raw incident
@@ -221,7 +236,9 @@ a clear geographic divide: our Western (SFO/SEA) and Central (ORD/DEN) hubs are
 currently operating above the network average risk, while our Coastal hubs (JFK/LAX) are
 trending significantly safer. This suggests that the risk in SFO and ORD is not just a
 byproduct of their large size, but a systemic operational friction that requires a targeted
-safety culture audit
+safety culture audit.
+![Alt Text for Image](images/A3-D.png)
+
 - **E) Operational Vulnerability: The Second Officer "Crisis Bottleneck":**\
 Our analysis of role-based safety impact identifies the Second Officer as the most significant
 operational vulnerability during a crisis. Specifically, while Second Officers have the lowest
@@ -233,8 +250,9 @@ their tardiness causes a disproportionate cascading delay, likely because replac
 logistics for this specific role are less agile than for Cabin Crew or senior pilots. We must
 implement a "High-Priority Notification" protocol specifically for Second Officer sign-ins to
 prevent these outlier delays from paralyzing the network.
+![Alt Text for Image](images/A3-E.png)
 
-![Alt Text for Image](D3.png)
+
 
 
 
@@ -251,6 +269,8 @@ Failure." By the time we hit the 35\% OTP floor, we have lost the ability to man
 passenger expectations or crew connections. We must immediately transition from
 "monitoring" these routes to a "Schedule Reset," specifically auditing whether our current
 "Block-Times" are based on theoretical flight speeds or the harsh reality of hub congestion.
+![Alt Text for Image](images/A4-A.png)
+
 - **B) The Miami Bottleneck: Identifying the Network's Single Point of Failure:**\
 Our analysis of hub dependency and systemic risk identifies Miami (MIA) as the network's
 primary "Single Point of Failure." MIA currently exerts the highest total pressure on the
@@ -262,7 +282,9 @@ destinations) as every other hub. This indicates that MIA is not suffering from 
 problem, but a "Velocity" problem. Because MIA sits at the top of our risk scale, any local
 failure at this node has a disproportionate cascading effect on the entire system. To stabilize
 the network, we must prioritize an infrastructure audit at MIA, as improving its turnaround
-efficiency by just 2% would recover more network time than any other operational change
+efficiency by just 2% would recover more network time than any other operational change.
+![Alt Text for Image](images/A4-B.png)
+
 - **D) Infrastructure Saturation:ATL’s Infrastructural Ceiling:**\
 The "Non-Linear Break": Our analysis of the Atlanta (ATL) hub reveals a critical "Saturation Point" where our physical
 and operational infrastructure fails to scale with demand. In July (Roster Month 7), we
@@ -276,6 +298,8 @@ staffing levels at ATL cannot absorb peak-season growth without a systemic break
 performance. We are not just getting busier; we are getting significantly less efficient as we
 grow, suggesting that further expansion at ATL without a physical infrastructure reset will
 result in diminishing returns and brand erosion.
+![Alt Text for Image](images/A4-C.png)
+
 - **E) The "Invisible Friction": Quantifying the 40,710-Minute Incident Tax:**\
 Our network sustainability audit reveals a hidden operational burden: a total "Incident Tax" of
 40,710 minutes (equivalent to over 678 hours) lost annually to non-technical operational
@@ -289,7 +313,7 @@ Late Boarding (7.68%), we find that nearly 25% of our total network friction is 
 workforce-related logistics rather than mechanical or environmental issues. This identifies a
 clear opportunity: we can recover over 10,000 minutes of network time by optimizing crew
 standby logistics and boarding procedures, without needing a single aircraft upgrade.
-![Alt Text for Image](D4.png)
+![Alt Text for Image](images/A4-D.png)
 
 
 
