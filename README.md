@@ -50,7 +50,7 @@ Our operational efficiency is currently hindered by a systemic "knock-on" effect
 top-three delay reason at 80% of our major hubs (8 out of 10). It accounts for 26.8% of all high-frequency delay occurrences (5,156 instances) in this dataset. With an average delay of
 29.1 minutes per occurrence, these rotation delays represent a network-wide instability rather than isolated terminal issues.
 To improve the situation, focus should be on improving turnaround buffers and gate management at the 8 identified hubs. Reducing rotation-related delays by even 10% would reclaim approximately 2,500 minutes of flight time per cycle, preventing single late arrivals from cascading into day-long schedule disruptions.
-![Alt Text for Image](images/A1-A.png)
+![Alt Text for Image](images/A1-A.png) \
 
 
 - **B) The "Chronic Five": Identifying Fleet-Wide Reliability Outliers:**\
