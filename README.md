@@ -164,7 +164,7 @@ punctuality.\
 **Recommendation**: Reducing Captain-specific sign-in delays to match even the First Officer's level
 (28.55 min) would create a more synchronized flight deck and remove a primary human
 obstacle to achieving a sharp, on-time departure.
-![Alt Text for Image](images/A2-A.png)
+![Alt Text for Image](images/A2-B.png)
 <br/>
 
 
